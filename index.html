@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <title>vue todolist</title>
+  </head>
+  <body>
+    <div id="app" class="container">
+
+      <img src="img/logobool.png" alt="">
+      <input v-model="newTodo" placeholder="Nuovo Todo" @keyup.enter="add">
+      <button @click="add">Aggiungi</button>
+      <button @click="removeAll">Cancella tutto</button> <br>
+      <div class="output-container">
+        <div class="output" v-for="(item, index) in todoList">
+          {{todoList[index]}}
+          <i class="fa fa-times" @click="remove(index)"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
