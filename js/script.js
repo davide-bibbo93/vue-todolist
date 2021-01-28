@@ -8,7 +8,7 @@ new Vue({
     add: function(){
       if (this.newTodo === '') {
         alert('Inserisci una cosa da fare.')
-      } else if (this.todoList.includes(this.newTodo)){
+      } else if (this.todoList.includes(this.newTodo)) {
         alert('Cosa da fare già inserita.')
       } else {
         this.todoList.push(this.newTodo)
@@ -20,8 +20,9 @@ new Vue({
       this.todoList.splice(index, 1)
     },
     removeAll: function() {
+      // rimuovo tutti gli elementi dall'array
       this.todoList = [];
-    }
+    },
   }
 })
 Vue.config.devtools = true;
